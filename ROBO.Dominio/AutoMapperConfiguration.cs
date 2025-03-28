@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using EspecificacaoAnalise.Dominio.Entidades;
-using EspecificacaoAnalise.Dominio.Resource.Request;
-using EspecificacaoAnalise.Dominio.Resource.Response;
+using ROBO.Dominio.Entidades;
+using ROBO.Dominio.Resource.Request;
+using ROBO.Dominio.Resource.Response;
 
 namespace ROBO.Dominio
 {
@@ -9,9 +9,9 @@ namespace ROBO.Dominio
     {
         public AutoMapperConfiguration()
         {
-            var entityAssemplyEntity = typeof(Entidade).Assembly;
-            var entityAssemplyRequest = typeof(EntidadeRequest).Assembly.ExportedTypes.ToList();
-            var entityAssemplyResponse = typeof(EntidadeResponse).Assembly.ExportedTypes.ToList();
+            var entityAssemplyEntity = typeof(Robo).Assembly;
+            var entityAssemplyRequest = typeof(RoboRequest).Assembly.ExportedTypes.ToList();
+            var entityAssemplyResponse = typeof(RoboResponse).Assembly.ExportedTypes.ToList();
 
             entityAssemplyEntity.ExportedTypes.ToList().ForEach(s =>
             {
@@ -27,25 +27,6 @@ namespace ROBO.Dominio
                 if (responseModelName != null)
                 {
                     var map = this.CreateMap(s, responseModelName).ReverseMap();
-
-                    CreateMap<Entidade, EntidadeResponse>()
-                    .ForMember(dest => dest.ProjetoDescricao, opt =>
-                    {
-                        opt.PreCondition(src => src.Projeto != null);
-                        opt.MapFrom(src => src.Projeto.Descricao);
-                    });
-
-                    CreateMap<EntidadeAcao, EntidadeAcaoResponse>()
-                    .ForMember(dest => dest.EntidadeDescricao, opt =>
-                    {
-                        opt.PreCondition(src => src.Entidade != null);
-                        opt.MapFrom(src => src.Entidade.Descricao);
-                    })
-                    .ForMember(dest => dest.AcaoDescricao, opt =>
-                    {
-                        opt.PreCondition(src => src.Acao != null);
-                        opt.MapFrom(src => src.Acao.Descricao);
-                    });
                 }
             });
 
