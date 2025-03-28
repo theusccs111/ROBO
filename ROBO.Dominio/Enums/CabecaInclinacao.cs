@@ -9,6 +9,6 @@ namespace ROBO.Dominio.Enums
         [Description("Em Repouso")]
         EmRepouso = 1,
         [Description("Para Baixo")]
-        Rotacao45 = 2
+        ParaBaixo = 2
     }
 }

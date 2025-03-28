@@ -7,7 +7,6 @@ namespace EspecificacaoAnalise.Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
     public class RoboController : ControllerBase
     {
         private readonly RoboService _roboService;
@@ -16,60 +15,27 @@ namespace EspecificacaoAnalise.Web.Controllers
             _roboService = roboService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpPost("Iniciar")]
+        public IActionResult Iniciar()
         {
-            var resultado = _roboService.Get();
-            return Ok(resultado);
+            var response = _roboService.Iniciar();
+            return Ok(response);
         }
 
-        [HttpGet("{Id}")]
-        public IActionResult GetById(int Id)
+        [HttpGet("obter-robo")]
+        [Authorize]
+        public IActionResult ObterRobo()
         {
-            var resultado = _roboService.GetById(Id);
-            return Ok(resultado);
+            var user = _roboService.ObterRobo();
+            return Ok(user);
         }
 
-        [HttpPost]
-        public IActionResult Post(RoboRequest request)
+        [HttpPut("Mover")]
+        [Authorize]
+        public IActionResult Mover(RoboRequest request)
         {
-            var dados = _roboService.Add(request);
-            return Ok(dados);
-        }
-
-        [HttpPost("Many")]
-        public IActionResult PostMany(RoboRequest[] request)
-        {
-            var dados = _roboService.AddMany(request);
-            return Ok(dados);
-        }
-
-        [HttpPut]
-        public IActionResult Put(RoboRequest request)
-        {
-            var dados = _roboService.Update(request);
-            return Ok(dados);
-        }
-
-        [HttpPut("Many")]
-        public IActionResult PutMany(RoboRequest[] request)
-        {
-            var dados = _roboService.UpdateMany(request);
-            return Ok(dados);
-        }
-
-        [HttpDelete]
-        public IActionResult Delete([FromBody] RoboRequest request)
-        {
-            var dados = _roboService.Delete(request);
-            return Ok(dados);
-        }
-
-        [HttpDelete("Many")]
-        public IActionResult DeleteMany([FromBody] RoboRequest[] request)
-        {
-            var dados = _roboService.DeleteMany(request);
-            return Ok(dados);
+            var user = _roboService.Mover(request);
+            return Ok(user);
         }
     }
 }

@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROBO.Dominio", "ROBO.Dominio\ROBO.Dominio.csproj", "{F21F3F22-2FF6-45FC-817D-104B69E0315C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROBO.Persistencia", "ROBO.Persistencia\ROBO.Persistencia.csproj", "{D2F33790-9CB5-466E-8642-3911C5B3DC08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROBO.Servico", "ROBO.Servico\ROBO.Servico.csproj", "{735885EC-F3A3-4901-B0FF-B3F2531EFE88}"
 EndProject
@@ -21,10 +19,6 @@ Global
 		{F21F3F22-2FF6-45FC-817D-104B69E0315C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F21F3F22-2FF6-45FC-817D-104B69E0315C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F21F3F22-2FF6-45FC-817D-104B69E0315C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2F33790-9CB5-466E-8642-3911C5B3DC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2F33790-9CB5-466E-8642-3911C5B3DC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2F33790-9CB5-466E-8642-3911C5B3DC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2F33790-9CB5-466E-8642-3911C5B3DC08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{735885EC-F3A3-4901-B0FF-B3F2531EFE88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{735885EC-F3A3-4901-B0FF-B3F2531EFE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{735885EC-F3A3-4901-B0FF-B3F2531EFE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
