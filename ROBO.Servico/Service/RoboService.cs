@@ -22,8 +22,10 @@ namespace EspecificacaoAnalise.Servico.Service
 {
     public class RoboService : Service<Robo, RoboRequest>
     {
-        public RoboService(IHttpContextAccessor httpContextAccessor, IMapper mapper, IConfiguration config) : base(httpContextAccessor, mapper, config)
+        private readonly RoboValidator _validator;
+        public RoboService(IHttpContextAccessor httpContextAccessor, IMapper mapper, IConfiguration config, RoboValidator validator) : base(httpContextAccessor, mapper, config)
         {
+            _validator = validator;
         }
 
         public Resultado<AuthResponse> Iniciar()
@@ -86,8 +88,7 @@ namespace EspecificacaoAnalise.Servico.Service
             var estadoAtual = Mapper.Map<Robo>(Robo.Robo); 
             var novoEstado = Mapper.Map<Robo>(request);
 
-            var validator = new RoboValidator();
-            var validReturn = validator.Validate(novoEstado, estadoAtual);
+            var validReturn = _validator.Validate(novoEstado, estadoAtual);
 
             if (!validReturn.IsValid)
                 throw new ROBO.Dominio.Exceptions.ValidationException(validReturn.Errors.ToList());

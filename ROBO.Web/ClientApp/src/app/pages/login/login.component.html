@@ -1,0 +1,16 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="heading-container">
+      <img src="../../../assets/icons/login-logo.svg" alt="">
+      <div class="heading main-heading">Sistema</div>
+    </div>
+
+    <div class="content">
+      <div class="main-heading">Acesso a interface do R.O.B.O</div>
+      <p class="highlight">Olá, bem-vindo(a)!</p>
+      <p class="highlight">Iniciando...</p>
+    </div>
+
+    <nz-alert nzType="error" [nzMessage]="errorMsg" *ngIf="showError"></nz-alert>
+  </div>
+</div>

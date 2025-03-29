@@ -1,0 +1,158 @@
+.sidebar {
+  width: 60px;
+  border-top-right-radius: 16px;
+  background-color: rgba(17, 106, 181, 1);
+  color: white;
+  position: fixed;
+  height: 100%;
+  transition: width 0.3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+
+.sidebar.sidebar-open {
+  width: 350px;
+  border-top-right-radius: 25px;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.sidebar.sidebar-open .sidebar-header {
+  justify-content: flex-start;
+}
+
+.sidebar .sidebar-header .logo {
+  max-width: 50px;
+  height: auto;
+}
+
+.sidebar .sidebar-search {
+  padding: 1rem;
+}
+
+.sidebar .sidebar-search input {
+  width: 100%;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #2979BB;
+  color: white;
+}
+
+.sidebar .sidebar-search input::placeholder {
+  color: #fafafa;
+}
+
+.sidebar .sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .sidebar-menu li {
+  padding: 0px 0.5rem 0px 1rem  ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+}
+
+.sidebar .sidebar-menu li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.sidebar .sidebar-menu li a .menu-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar .sidebar-menu li a .submenu-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .sidebar-menu li a:hover {
+  background-color: rgba(245, 130, 31, 1);
+
+}
+
+.sidebar .sidebar-menu li a i {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .sidebar-menu li .submenu {
+  list-style: none;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 26px;
+  transition: max-height 0.3s ease-out;
+  border-left: 2px solid white;
+}
+
+.sidebar .sidebar-menu li .submenu li {
+  padding: 0.5rem 0;
+}
+
+.sidebar .sidebar-menu li .submenu li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.sidebar .sidebar-menu li .submenu li a:hover {
+  background-color: rgba(245, 130, 31, 1);
+  padding-left: 10%;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+.sidebar .sidebar-menu li .submenu-open {
+  max-height: 100%;
+}
+
+.sidebar .sidebar-menu li a i.icon-home {
+  margin-right: 10px;
+}
+
+.sidebar.sidebar-open .sidebar-menu a span {
+  display: inline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aggregator {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: white;
+  opacity: 0.7;
+}
+
+.submenu.submenu-open {
+  margin-left: 4.5%;
+}
+

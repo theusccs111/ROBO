@@ -15,7 +15,7 @@ namespace EspecificacaoAnalise.Web.Controllers
             _roboService = roboService;
         }
 
-        [HttpPost("Iniciar")]
+        [HttpGet]
         public IActionResult Iniciar()
         {
             var response = _roboService.Iniciar();

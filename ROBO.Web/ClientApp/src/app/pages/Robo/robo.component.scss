@@ -1,0 +1,62 @@
+.robo-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    nz-card {
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+      border-radius: 8px;
+      
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+    }
+    
+    nz-descriptions {
+      margin-bottom: 24px;
+      
+      nz-descriptions-item {
+        padding: 12px !important;
+      }
+    }
+    
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      
+      button {
+        height: 48px;
+        font-size: 16px;
+        padding: 0 32px;
+      }
+    }
+    
+    nz-form-item {
+      margin-bottom: 16px;
+    }
+    
+    nz-radio-group {
+      display: flex;
+      flex-direction: column;
+      
+      label {
+        margin: 8px 0;
+        height: auto;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .robo-container {
+      padding: 12px;
+      
+      nz-descriptions {
+        [nzTitle] {
+          width: 120px !important;
+        }
+      }
+    }
+  }

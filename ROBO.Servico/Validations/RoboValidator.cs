@@ -11,7 +11,7 @@ namespace ROBO.Servico.Validations
         {
         }
 
-        public ValidationResult Validate(Robo novoEstado, Robo estadoAtual)
+        public virtual ValidationResult Validate(Robo novoEstado, Robo estadoAtual)
         {
             RuleFor(robo => robo.BracoDireitoPulso)
                 .NotNull()

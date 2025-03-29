@@ -1,0 +1,89 @@
+<div class="robo-container" nz-row [nzGutter]="[16, 16]">
+    <div nz-col nzSpan="24">
+      <nz-card nzTitle="Controle do Robô">
+        <div nz-row nzJustify="space-between" nzAlign="middle">
+          <div nz-col>
+            <h2>Estado Atual do Robô</h2>
+          </div>
+        </div>
+  
+        <nz-descriptions nzBordered [nzColumn]="2">
+          <nz-descriptions-item nzTitle="Braço Direito - Cotovelo">{{ estadoAtual.bracoDireitoCotoveloDescricao || 'N/A' }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Braço Direito - Pulso">{{ estadoAtual.bracoDireitoPulsoDescricao || 'N/A' }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Braço Esquerdo - Cotovelo">{{ estadoAtual.bracoEsquerdoCotoveloDescricao || 'N/A' }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Braço Esquerdo - Pulso">{{ estadoAtual.bracoEsquerdoPulsoDescricao || 'N/A' }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Cabeça - Inclinação">{{ estadoAtual.cabecaInclinacaoDescricao || 'N/A' }}</nz-descriptions-item>
+          <nz-descriptions-item nzTitle="Cabeça - Rotação">{{ estadoAtual.cabecaRotacaoDescricao || 'N/A' }}</nz-descriptions-item>
+        </nz-descriptions>
+        
+        <nz-alert nzType="error" [nzMessage]="errorMsg" *ngIf="showError"></nz-alert>
+      </nz-card>
+    </div>
+    
+  
+    <!-- Controles dos Braços -->
+    <div nz-col nzXs="24" nzMd="12">
+      <nz-card nzTitle="Braço Direito">
+        <div nz-form-item>
+          <nz-form-label>Cotovelo</nz-form-label>
+          <nz-form-control>
+            <nz-select [(ngModel)]="bracoDireitoCotoveloValue" nzPlaceHolder="Selecione" (ngModelChange)="moverArticulacao()">
+              <nz-option *ngFor="let option of bracoDireitoCotoveloOptions" [nzLabel]="option.label" [nzValue]="option.value">
+              </nz-option>
+            </nz-select>
+          </nz-form-control>
+        </div>
+  
+        <div nz-form-item>
+          <nz-form-label>Pulso</nz-form-label>
+          <nz-form-control>
+            <nz-select [(ngModel)]="bracoDireitoPulsoValue" nzPlaceHolder="Selecione" (ngModelChange)="moverArticulacao()">
+              <nz-option *ngFor="let option of bracoDireitoPulsoOptions" [nzLabel]="option.label" [nzValue]="option.value">
+              </nz-option>
+            </nz-select>
+          </nz-form-control>
+        </div>
+      </nz-card>
+    </div>
+  
+    <div nz-col nzXs="24" nzMd="12">
+      <nz-card nzTitle="Braço Esquerdo">
+        <div nz-form-item>
+          <nz-form-label>Cotovelo</nz-form-label>
+          <nz-form-control>
+            <nz-select [(ngModel)]="bracoEsquerdoCotoveloValue" nzPlaceHolder="Selecione" (ngModelChange)="moverArticulacao()">
+              <nz-option *ngFor="let option of bracoEsquerdoCotoveloOptions" [nzLabel]="option.label" [nzValue]="option.value">
+              </nz-option>
+            </nz-select>
+          </nz-form-control>
+        </div>
+  
+        <div nz-form-item>
+          <nz-form-label>Pulso</nz-form-label>
+          <nz-form-control>
+            <nz-select [(ngModel)]="bracoEsquerdoPulsoValue" nzPlaceHolder="Selecione" (ngModelChange)="moverArticulacao()">
+              <nz-option *ngFor="let option of bracoEsquerdoPulsoOptions" [nzLabel]="option.label" [nzValue]="option.value">
+              </nz-option>
+            </nz-select>
+          </nz-form-control>
+        </div>
+      </nz-card>
+    </div>
+  
+    <!-- Controles da Cabeça -->
+    <div nz-col nzXs="24" nzMd="12">
+      <nz-card nzTitle="Cabeça - Inclinação">
+        <nz-radio-group [(ngModel)]="cabecaInclinacaoValue" (ngModelChange)="moverArticulacao()">
+          <label nz-radio *ngFor="let option of cabecaInclinacaoOptions" [nzValue]="option.value">{{option.label}}</label>
+        </nz-radio-group>
+      </nz-card>
+    </div>
+  
+    <div nz-col nzXs="24" nzMd="12">
+      <nz-card nzTitle="Cabeça - Rotação">
+        <nz-radio-group [(ngModel)]="cabecaRotacaoValue" (ngModelChange)="moverArticulacao()">
+          <label nz-radio *ngFor="let option of cabecaRotacaoOptions" [nzValue]="option.value">{{option.label}}</label>
+        </nz-radio-group>
+      </nz-card>
+    </div>
+  </div>

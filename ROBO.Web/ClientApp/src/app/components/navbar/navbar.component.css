@@ -1,0 +1,111 @@
+.navbar {
+  background-color: white;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 6rem;
+  height: 64px;
+  z-index: 20;
+  box-shadow: 0px 4px 16px 0px #00000008;
+}
+
+.navbar .left-section {
+  flex: 1;
+}
+
+.navbar .left-section .title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21.28px;
+  text-align: left;
+  color: #151515;
+}
+
+.navbar .right-section {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .right-section .notifications {
+  margin-top: 4px;
+}
+
+.navbar .right-section .notifications,
+.navbar .right-section .block-screen button {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.navbar .right-section .block-screen {
+  color: #000;
+}
+
+.navbar .right-section .user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.navbar .right-section .user-info .user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.navbar .right-section .user-info .username .user {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18.62px;
+  text-align: left;
+  color: black;
+}
+
+.navbar .right-section .user-info .username>p {
+  color: rgba(17, 106, 181, 1);
+  margin: 0;
+}
+
+.navbar .logout {
+  color: red;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.62px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bell, .lock {
+  font-size: 20px;
+}
+
+::ng-deep nz-modal-container div.ant-modal {
+  transform-origin: center !important;
+  min-width: 100% !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.is-notification{
+  color: #34C759;
+}
+.no-notification {
+  color: #AEAEB2;
+}
+
+::ng-deep nz-modal-container div.ant-modal div ant-modal-content {
+  background-color: none;
+}
+
+::ng-deep nz-modal-container div.ant-modal div.ant-modal-content div.ant-modal-body {
+  padding: 0;
+}

@@ -1,0 +1,14 @@
+<div *ngIf="isShowSideBar">
+  <app-navbar></app-navbar>
+  <app-sidebar></app-sidebar>
+  <div class="app-content">
+    <app-topbar></app-topbar>
+    <div class="h-100" [ngClass]="toolbarIsVisible ? 'page-content-with-toolbar' : 'page-content-without-toolbar'">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
+<div *ngIf="!isShowSideBar">
+  <router-outlet></router-outlet>
+</div>

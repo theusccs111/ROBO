@@ -1,0 +1,56 @@
+<div class="sidebar" [ngClass]="{'sidebar-open': isSidebarOpen}" (mouseenter)="openSidebar()"
+  (mouseleave)="closeSidebar()" *ngIf="shouldDisplaySidebar()">
+  <!-- <div class="sidebar" [ngClass]="'sidebar-open'" *ngIf="shouldDisplaySidebar()"> -->
+  <div class="sidebar-header">
+    <img src="../../../../assets/icons/login-logo.svg" alt="Logo" class="logo">
+  </div>
+
+
+  <!--<div *ngIf="isSidebarOpen" class="sidebar-search">
+    <div class="input-icon-group left">
+      <div class="icon">
+        <i nz-icon nzType="search"></i>
+      </div>
+       <input type="text" placeholder="Buscar por" [(ngModel)]="searchText" (input)="onSearchMenuChange()">
+
+      </div>
+</div>-->
+
+
+
+
+  <ul class="sidebar-menu">
+    @for (item of foundMenus | async; track $index) {
+    <li *ngIf="isSidebarOpen" [id]="item.id" class="aggregator"> {{ item.aggregator }} </li>
+
+    @for (menu of item.items; track $index) {
+    <li [id]="menu.id">
+      <a [routerLink]="menu.path ? menu.path : '#'"
+        (click)="(menu.items?.length ?? 0) > 0 && toggleSubMenu(menu.id ?? menu.title)">
+        <i class="icon-home">
+          <img *ngIf="menu.icon?.type == 'image'" [src]="menu.icon?.value" [alt]="menu.title">
+        </i>
+
+        <span *ngIf="isSidebarOpen" class="menu-title">
+          {{ menu.title }}
+          <span class="submenu-icon" nz-icon [nzType]="isSubMenuOpen(menu.id ?? menu.title) ? 'down' : 'right'"
+            nzTheme="outline" *ngIf="(menu.items?.length ?? 0) > 0"></span>
+        </span>
+      </a>
+
+      <ul *ngIf="(menu.items?.length ?? 0) > 0" class="submenu"
+        [ngClass]="{ 'submenu-open': isSubMenuOpen(menu.id ?? menu.title) }">
+
+        @for (submenu of menu.items; track $index) {
+        <li [id]="submenu.id">
+          <a [routerLink]="submenu.path ? submenu.path : '#'">
+            {{ submenu.title }}
+          </a>
+        </li>
+        }
+      </ul>
+    </li>
+    }
+    }
+  </ul>
+</div>

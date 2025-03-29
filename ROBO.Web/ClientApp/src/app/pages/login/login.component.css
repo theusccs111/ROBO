@@ -1,0 +1,73 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/assets/pages/login_background.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: black;
+}
+
+.login-card {
+  background-color: white;
+  padding: 16px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  min-height: 600px;
+}
+
+.login-card .heading-container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 48px;
+}
+
+.login-card .heading-container img {
+  height: 150px; /* Ajusta a altura da logo para coincidir com a altura da linha do texto */
+  margin-right: 0.5em; /* Adiciona um espaço entre a logo e o texto */
+}
+
+.login-card .content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 48px;
+}
+
+.login-card .content > div {
+  padding-bottom: 1rem;
+}
+
+.login-card .content > .highlight {
+  margin: 0;
+  color: rgba(98, 98, 98, 1);
+  font-size: 14px;
+}
+
+
+@media (max-width: 1024px) {
+  .login-card{
+      width: 600px;
+      height: 500px;
+      padding: 44px 54px;
+  }
+
+  .login-card .heading-container{
+      padding-bottom: 24px;
+  }
+
+  .login-card .content{
+      padding-bottom: 24px;
+  }
+
+  
+}
+
+.button-save {
+  float: right;
+  border-radius: 20px;
+}
+
+

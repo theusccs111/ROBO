@@ -1,0 +1,20 @@
+<div *ngIf="shouldDisplayNavbar()">
+  <header class="navbar">
+    <div class="left-section">
+      <span class="title">
+        {{ title }}
+      </span>
+    </div>
+
+    <div class="right-section">
+      <div class="user-info">
+        <img class="user-avatar" src="../../../../assets/icons/user.svg" alt="User Avatar">
+        <span class="username">
+          <p class="user"> R.O.B.O. Conectado </p>
+        </span>
+      </div>
+
+      <a class="logout" (click)="logout()">Sair</a>
+    </div>
+  </header>
+</div>

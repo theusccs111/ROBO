@@ -1,0 +1,17 @@
+[
+  {
+    "id": "c3d2c7e6-f43a-4c35-b47d-36a1cfb8cfc4",
+    "aggregator": "Begin",
+    "items": [
+      {
+        "id": "0d8fb374-515c-4fd0-bf6a-12992fdf8d61",
+        "title": "Robô",
+        "icon": {
+          "type": "image",
+          "value": "../../assets/icons/icon-indice.svg"
+        },
+        "path": "robo"
+      }
+    ]
+  }
+]

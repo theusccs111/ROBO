@@ -1,0 +1,63 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+app-sidebar {
+  z-index: 1000;
+  height: 100%;
+  background-color: rgba(17, 106, 181, 1);  
+  transition: width 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+app-home {
+  z-index: 10;
+  margin-top: 5em;
+}
+
+
+.sidebar-open {
+  width: 250px;  
+}
+
+.sidebar-close {
+  width: 70px; 
+}
+
+.app-content {
+  padding: 24px;
+  margin-left: 6.3%;
+  width: 90%;
+}
+
+.page-content-with-toolbar {
+  height: calc(100vh - 110px);
+}
+
+.page-content-without-toolbar {
+  height: calc(100vh - 80px);
+}
+
+
+.position-fixed {
+  position: fixed;
+}
+
+.fixed-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

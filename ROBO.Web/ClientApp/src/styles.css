@@ -1,0 +1,642 @@
+
+.main-heading {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.92px;
+    text-align: left;
+
+}
+
+.highlight {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.28px;
+    text-align: left;
+
+}
+
+.label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.62px;
+    text-align: left;
+
+}
+
+.error-message {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+    text-align: left;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: rgba(248, 248, 248, 1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mat-mdc-dialog-container,
+.mat-mdc-dialog-container .mdc-dialog__container,
+.mat-mdc-dialog-container .mdc-dialog__surface {
+
+    position: fixed;
+
+    left: 400px;
+    top: 100px;
+    width: 700px !important;
+    height: 80% !important;
+    overflow-x: hidden;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    width: 50% !important;
+    height: 50%;
+}
+
+.info-buttons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 3.81%;
+    top: 125px
+}
+
+.info-buttons .btn {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    background-color: rgba(98, 98, 98, 0.1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-buttons .btn.info {
+    background-color: #ffffff;
+    color: #151515;
+    border: 1px solid #cacaca;
+}
+
+.info-buttons .btn.primary {
+    background-color: #2979bb;
+    color: white;
+}
+
+.info-buttons .btn.primary:hover {
+    background-color: #2493ee;
+}
+
+.info-buttons .btn:hover {
+    background-color: rgba(98, 98, 98, 0.2);
+}
+
+.filter-form-item .ant-select,
+.filter-form-item .ant-picker,
+.filter-form-item .ant-input-number {
+    width: 100%;
+    border-color: #ECECEC;
+    background-color: #FFFFFF;
+}
+
+
+
+.modal-custom {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    min-width: 30%;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.ant-drawer-body .modal-content .ant-modal-footer {
+    position: fixed;
+    right: 1.8%;
+    bottom: 0;
+    border: 0px;
+    padding-right: 0px;
+}
+
+.ant-modal {
+    padding-bottom: 0px;
+}
+
+
+.modal-content .ant-table-wrapper {
+    height: 300px;
+    max-height: 300px;
+}
+
+.card-filter {
+    margin-bottom: 2%;
+}
+
+.ant-card-head {
+    border-bottom: 0px;
+}
+
+.ant-btn-icon-only {
+    border-radius: 20%;
+    line-height: 1;
+}
+
+.button-without-label {
+    height: 44px;
+    position: relative;
+    top: 40%;
+}
+
+.bold-label {
+    font-weight: 600;
+}
+
+.delete-menu-item {
+    color: red;
+}
+
+.delete-menu-item i {
+    color: red;
+}
+
+.delete-menu-item:disabled {
+    color: gray;
+}
+
+.delete-menu-item i:disabled {
+    color: gray;
+}
+
+.editable-cell {
+    position: relative;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.editable-row:hover .editable-cell {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 4px 11px;
+}
+
+.table-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-salvar {
+    background: #F5821F;
+    border-color: #F5821F;
+}
+
+.btn-salvar:focus {
+    background: #F5821F;
+    border-color: #F5821F;
+    opacity: 0.7;
+}
+
+.btn-salvar:hover {
+    background: #F5821F;
+    border-color: #F5821F;
+    opacity: 0.7;
+}
+
+.btn-red {
+    background: #EC5059;
+    border-color: #EC5059;
+}
+
+.btn-green {
+    background: #52C41A;
+    border-color: #52C41A;
+}
+
+td,
+th {
+    white-space: nowrap;
+}
+
+.table-content {
+    overflow-x: auto;
+}
+
+div.modal-content {
+    border: none;
+}
+
+nz-card:not(:has(nz-table)) {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+nz-card {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px #0000000F;
+    border-radius: 12px !important;
+    border: 1px solid #E3E3E3 !important;
+}
+
+nz-card nz-table nz-table-inner-default div.ant-table-content {
+    overflow-x: auto;
+}
+
+.nz-table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.div-flex {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.asterisk {
+    color: red;
+}
+
+.card-filter {
+    transition: height 0.3s ease;
+}
+
+.card-filter.collapsed .nz-card-body {
+    display: none;
+}
+
+.card-filter .nz-card-body {
+    display: block;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.ant-drawer-body {
+    margin-bottom: 59px;
+}
+
+.right-align {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.fundo-cinza {
+    background-color: rgba(141, 141, 141, 0.5) !important;
+}
+
+.plus-circle {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.plus-circle {
+    color: #116AB5;
+}
+
+.plus-circle i {
+    color: #116AB5;
+}
+
+.main-table-header {
+    height: 55px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #F5F5F5;
+        transition: background-color 0.1s ease-in;
+    }
+}
+
+.custom-disabled {
+    background-color: #f5f5f5 !important;
+    cursor: not-allowed;
+    color: #4E4E4E !important;
+    pointer-events: none;
+}
+
+.div-flex.right-align {
+    padding-bottom: 10px;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+
+::ng-deep .ant-table {
+    width: fit-content;
+}
+
+.nz-input-error {
+    border-color: #ff4d4f !important;
+}
+
+.nz-select-error {
+    border: 1px solid red;
+}
+
+.required-field-error {
+    font-size: 10px;
+    color: #ff4d4f;
+}
+
+.all-bottom-space {
+    margin-bottom: 20px;
+}
+
+.ant-picker-status-error.ant-picker {
+    border: 1px solid red;
+}
+
+button[nzType="link"]:has(span[nzType="close"]) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    color: #116AB5;
+}
+
+
+@media (max-width: 767px) {
+    .custom-table-with-scroll {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nz-table {
+        width: 100%;
+        min-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-flex {
+      box-shadow: 0px 4px 8px 0px #0000000F;
+      padding: 25px;
+      background: #fff;
+      margin-bottom: 25px;
+    }
+}
+
+.ellipsis-cell {
+    max-width: 136px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.plus-circle {
+    color: #116ab5;
+}
+
+.plus-circle i {
+    color: #116ab5;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.plus-circle {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+th[nzalign="right"] {
+    text-align: right;
+}
+
+.table-card {
+    flex: 1;
+}
+
+.th-quebra-linha {
+    white-space: normal;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.ant-card {
+    margin-bottom: 30px;
+}
+
+nz-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    div.ant-spin-container {
+        div.ant-table-content {
+            border-radius: 12px;
+            border: 1px solid #ECECEC;
+        }
+        nz-pagination {
+            padding: 16px 40px 16px 40px;
+            /* border-top: 1px solid #000000; */
+
+            li.ant-pagination-item {
+                border-radius: 4px;
+                font-weight: 400;
+                border-color: #ECECEC;
+            }
+
+            li button.ant-pagination-item-link,
+            li.ant-pagination-item-next button.ant-pagination-item-link
+            li.ant-pagination-options nz-select-top-control.ant-select-selector {
+                border-radius: 4px !important;
+                border-color: #ECECEC !important;
+            }
+
+            li.ant-pagination-item-active {
+                background: #1890ff;
+                a {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    td {
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    th {
+        font-size: 12px;
+        font-weight: 600 !important;
+
+        div {
+            display: block !important;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
+nz-table th,
+nz-table td {
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.numeric-column {
+    text-align: right;
+}
+
+nz-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+nz-table th:not(.divisor) {
+    background-color: #f5f5f5;
+    width: 150px;
+}
+
+nz-table th.month {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    width: 130px;
+}
+
+nz-table td.dynamic-column {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    width: 130px;
+}
+
+.ant-card-head-title {
+    font-weight: 600;
+}
+
+/* nz-card:has(nz-table) div.ant-card-body {
+    padding: 0 !important;
+} */
+
+nz-table th.divisor.headcount {
+    background-color: #f5f5f5;
+    width: 500px;
+}
+
+nz-table th.divisor.custo-comparativo-2025 {
+    background-color: #f5f5f5;
+    width: 200px;
+}
+
+nz-table th.divisor.custo-comparativo-2026 {
+    background-color: #f5f5f5;
+    width: 900px;
+}
+
+.th-quebra-linha {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.responsive-table-container {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+.responsive-table-container nz-table {
+    min-width: 900px;
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+
+/* Estilização do scrollbar */
+::-webkit-scrollbar {
+  height: 10px;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(179, 179, 179, 0.3);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(179, 179, 179, 0.5);
+}
+
+::-webkit-scrollbar-button {
+  width: 30px;
+  height: 12px;
+  background-color: rgba(179, 179, 179, 0.3);
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+::-webkit-scrollbar-button:hover {
+  background-color: rgba(179, 179, 179, 0.5);
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><polygon points="8,2 4,6 8,10" fill="%23666"/></svg>');
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><polygon points="4,2 8,6 4,10" fill="%23666"/></svg>');
+}
+
+.actions-column {
+    width:80px;
+    text-align: right;
+}
+
+nz-form-item{
+    width: 185px;
+}
+
+.custom-form-item{
+    width: 100%;
+}
+
+.nz-flex-10{
+    width:10%;
+}
+
+.nz-flex-50{
+    width:50%;
+}
+
+.nz-flex-90{
+    width:90%;
+}
+
+.nz-flex-100{
+    width:100%;
+}
